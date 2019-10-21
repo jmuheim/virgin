@@ -11,7 +11,7 @@ set :repo_url, "git@github.com:jmuheim/virgin.git"
 set :deploy_via, :remote_cache
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
+set :deploy_to, "/home/www-data/#{fetch(:application)}" # Why does `fetch(:user)` not work?
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
