@@ -1,24 +1,3 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+sudo nine-manage-vhosts virtual-host create virgin.access4all.ch --template=reverseproxy_puma --webroot=/home/www-data/virgin.access4all.ch/rails/current/public --template-variable MODSEC=Off --template-variable PROXYPORT=3000
