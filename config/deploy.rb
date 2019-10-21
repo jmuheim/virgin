@@ -1,14 +1,17 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.2"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "virgin.access4all.ch"
+set :repo_url, "git@github.com:jmuheim/virgin.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
+# Check out repository once, then pull on each deploy (instead of checking out each time)
+set :deploy_via, :remote_cache
+
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
